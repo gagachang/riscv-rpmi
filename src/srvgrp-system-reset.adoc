@@ -212,8 +212,8 @@ This service is used to initiate the system reset or system shutdown.
 The application processor must only request supported reset types, discovered
 using the `SYSRST_GET_ATTRIBUTES` service except for System Shutdown and System
 Cold Reset which are supported by default. This service does not return a response.
-If an unsupported reset type is provided, or if the system reset fails, the
-resulting system state is unspecified.
+If an invalid reset type is provided, the reset request is ignored. If the
+system reset fails, the resulting system state is unspecified.
 
 [#table_sysreset_sysreset_request_data]
 .Request Data
